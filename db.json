@@ -21,6 +21,17 @@
       "cost": 0,
       "services": [],
       "id": 2
+    },
+    {
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "budget": "323",
+      "name": "projeto",
+      "cost": 0,
+      "services": [],
+      "id": 3
     }
   ],
   "categories": [
