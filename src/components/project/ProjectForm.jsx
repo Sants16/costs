@@ -8,9 +8,6 @@ import styles from './ProjectForm.module.css'
 
 const ProjectForm = ({ handleSubmit, btnText, projectData }) => {
 
-    const [categories, setCategories] = useState([])
-    const [project, setProject] = useState(projectData || [])
-
    useEffect(() => {
      //fizemos a requisição para o backend fake feito com o json-server (db.json que a nossa api/banco de dados)
      fetch('http://localhost:5000/categories', {
@@ -25,6 +22,9 @@ const ProjectForm = ({ handleSubmit, btnText, projectData }) => {
     }) /*pegamos a resp.json e a colocamos dentro do state das categories que foi definido como padrão um array vazio []*/
     .catch((err) => console.log(err)) /* caso tenha um erro ele sera exibido no console */
    }, []) /* colocamos o [] pq o useEffect espera um valor inicial para verificar se houve mudança, acredito que seja na mesma logica que o useState */
+
+    const [categories, setCategories] = useState([])
+    const [project, setProject] = useState(projectData || [])
 
    const submit = (e) => {
     e.preventDefault()
